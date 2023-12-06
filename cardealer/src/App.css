@@ -2,25 +2,24 @@
 
 .page-container {
   text-align: center;
-  background-image: url('https://img.freepik.com/free-photo/volume-abstract-graphic-loneliness-desk_1258-258.jpg?w=1800&t=st=1701843077~exp=1701843677~hmac=d7da123faa6c8eecc0c129618f538a40533b2c0bf3801d282a2faf0462ab5201'); /* Replace 'your_image_url.jpg' with the actual URL or path to your image */
-  background-size: cover; /* This property ensures that the background image covers the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
-  min-height: 100vh; /* Set a minimum height to cover the full viewport height */
+  background-image: url('https://img.freepik.com/free-photo/volume-abstract-graphic-loneliness-desk_1258-258.jpg?w=1800&t=st=1701843077~exp=1701843677~hmac=d7da123faa6c8eecc0c129618f538a40533b2c0bf3801d282a2faf0462ab5201');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between cards */
-  justify-content: space-evenly; /* Adjust as needed */
-  margin: 0 auto; /* Center the cards container */
-  max-width: 1200px; /* Set a maximum width for the cards container */
+  gap: 20px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .card {
@@ -28,54 +27,99 @@
   padding: 15px;
   text-align: center;
   width: 500px;
-  height: 500px; /* Set a fixed height for all cards */
-  overflow: hidden; /* Ensure the card maintains fixed dimensions */
+  height: 500px;
+  overflow: hidden;
   background-color: black;
   color: white;
+  position: relative;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Add transition for smooth color and opacity change */
 }
-
 
 .card img {
   width: 100%;
-  height: 150%; /* Set a fixed height for all images */
+  height: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
 }
 
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.card .additional-info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .additional-info {
+  display: block;
+  opacity: 1;
+}
+
+.card:hover img {
+  opacity: 0; /* Set opacity to 0 on hover */
+}
+
+.card:hover {
+  background-color: white; /* Set background color to transparent white on hover */
+}
+
+.card-content strong {
+  font-size: 1.5em;
+}
+
+.card-content p {
+  margin: 10px 0;
+}
+
+.additional-info p {
+  margin: 10px 0;
+  color: black; /* Set color to black */
+}
 
 h1 {
-  color: #333; /* Change the color to your preference */
-  font-size: 2.5em; /* Adjust the font size as needed */
-  margin-bottom: 20px; /* Add some space below the h1 element */
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 h2 {
-  color: #555; /* Change the color to your preference */
-  font-size: 2em; /* Adjust the font size as needed */
-  margin-bottom: 15px; /* Add some space below the h2 element */
+  color: #555;
+  font-size: 2em;
+  margin-bottom: 15px;
 }
+
 /* Footer.css */
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 0.2rem; /* Adjust the padding as needed */
+  padding: 0.2rem;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2rem; /* Set the height as needed */
-  line-height: 0.1rem; 
-}
-
-
-.react-app {
-
+  height: 2rem;
+  line-height: 0.1rem;
 }
 
 .click-here {
-  color: #ff5733; /* Change the link color to your preference */
+  color: #ff5733;
   text-decoration: none;
-
 }
+
 .brand {
-  margin-right: 30px; /* Adjust the margin as needed */
+  margin-right: 30px;
 }
