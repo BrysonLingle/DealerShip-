@@ -1,0 +1,48 @@
+.card {
+    position: relative;
+  }
+  
+  .card .additional-info {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .additional-info {
+    display: block;
+    opacity: 1;
+    font-size: 30px;
+    position: relative;
+  }
+  .buttonInfo {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: 0; /* Initially hide the button */
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .buttonInfo {
+    opacity: 1; /* Display the button on hover */
+    
+  }
+  .buttonInfo:hover{
+    background-color: greenyellow;
+    color: black;
+    
+  }
+  

@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: white;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  .logo {
+    max-width: 100px; /* Adjust the max-width as needed */
+    max-height: 100px; /* Adjust the max-height as needed */
+  }
